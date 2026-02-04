@@ -1,24 +1,29 @@
-// câu 1
-let fullName="Quý,Nam,Lan,Hùng,Nam";
-let students=fullName.split("-");
-for(let i=0;i<students.length;i++){
-console.log("chuỗi sau khi  chuyển đổi: ",students[students.length-1]);
+// Câu 1
+let fullName = "Quý,Nam,Lan,Hùng,Nam";
 
+// 1. Chuyển chuỗi thành mảng
+let students = fullName.split(",");
+console.log("Mảng sau khi chuyển đổi:", students);
+
+// 2. In từng phần tử
+for (let i = 0; i < students.length; i++) {
+    console.log("Phần tử:", students[i]);
 }
-console.log("mảng sau khi đảo ngược: ",students.reverse());
-const n=students.includes(Lan);
-if(n===true){
-    console.log("Tên Lan tồn tại tỏng mảng");
-    
-}else{
+
+// 3. Đảo ngược mảng
+console.log("Mảng sau khi đảo ngược:", students.reverse());
+
+// 4. Kiểm tra Lan có tồn tại không
+if (students.includes("Lan")) {
+    console.log("Tên Lan tồn tại trong mảng");
+} else {
     console.log("Tên Lan không tồn tại trong mảng");
-    
 }
-const m=students.indexOf(Nam);
-for(let i=0;i<students.length;i++){
-    if(m!==-1){
-        console.log("vị trí của nam trong mảng:",m[0]);
-        
-    }
 
+// 5. Tìm vị trí của Nam
+let indexNam = students.indexOf("Nam");
+if (indexNam !== -1) {
+    console.log("Vị trí của Nam trong mảng:", indexNam);
+} else {
+    console.log("Không tìm thấy Nam trong mảng");
 }
